@@ -32,7 +32,7 @@ def suggested_question_pdf(user_id):
     data=request.data
     
     data = data.decode('utf8').replace("'", '"')
-    run_time = datetime.now() + timedelta(0,5)
+    run_time = datetime.now() + timedelta(0,300)
     if data is None or data=='':
         return jsonify({'code':400,"message":"data is unavailable","status":'failed'})
     try:
